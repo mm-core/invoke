@@ -4,3 +4,4 @@ src/
 tsconfig.json
 *.sh
 *.log
+mm.json

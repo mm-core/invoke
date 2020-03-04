@@ -1,9 +1,9 @@
 {
-	"name": "@mmstudio/base",
+	"name": "@mmstudio/invoke",
 	"version": "1.0.0",
-	"description": "$desc",
+	"description": "invoke js",
 	"scripts": {
-		"test": "tsc && ava ./tests/*.js",
+		"test": "tsc && ava ./tests/test.js",
 		"watch": "tsc -w & ava --watch ./tests/*.js",
 		"lint": "eslint ./src/*.ts",
 		"compile": "tsc",
@@ -25,8 +25,8 @@
 		"框架"
 	],
 	"author": {
-		"name": "$user",
-		"email": "$email@xxx.com"
+		"name": "taoqf",
+		"email": "tao_qiufeng@126.com"
 	},
 	"maintainers": [
 		{
@@ -36,13 +36,18 @@
 	],
 	"license": "MIT",
 	"dependencies": {},
+	"peerDependencies": {
+		"@mmstudio/config": "*"
+	},
 	"devDependencies": {
+		"@mmstudio/config": "latest",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@typescript-eslint/parser": "latest",
 		"ava": "latest",
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-import": "latest",
+		"log4js": "^6.1.2",
 		"typescript": "next"
 	}
 }

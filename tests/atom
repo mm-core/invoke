@@ -1,0 +1,7 @@
+"use strict";
+
+function atom(msg, actionid) {
+	return `${msg.foo}-${actionid}`;
+}
+
+exports.default = atom;
