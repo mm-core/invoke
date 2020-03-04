@@ -1,6 +1,6 @@
 {
 	"name": "@mmstudio/invoke",
-	"version": "1.0.0",
+	"version": "1.0.202003041617",
 	"description": "invoke js",
 	"scripts": {
 		"test": "tsc && ava ./tests/test.js",
