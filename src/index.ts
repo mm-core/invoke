@@ -34,13 +34,8 @@ export default async function invoke<T>(cwd: string, service: string, content: u
 			delete (require.cache as { [key: string]: unknown })[path];
 		}
 		// eslint-disable-next-line import/no-dynamic-require
-		const result = await (require(path) as { default(c: unknown, a: string): Promise<T> }).default(content, actionid);
-		if (result === undefined) {
-			logger.error(`Service:${file_name} should return something. actionid=${actionid}, msg=${body}`);
-			throw new Error(`Service:${file_name} should return something, actionid=${actionid}`);
-		} else {
-			return result;
-		}
+		const atom = (require(path) as { default(c: unknown, a: string): Promise<T> });
+		return await atom.default(content, actionid);
 	} catch (e) {
 		const err = e as Error;
 		logger.trace(err);
