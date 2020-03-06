@@ -5,9 +5,11 @@
 	"scripts": {
 		"test": "tsc && ava ./tests/test.js",
 		"watch": "tsc -w & ava --watch ./tests/*.js",
-		"lint": "eslint ./src/*.ts",
+		"clean": "del-cli ./dist/",
+		"lint": "eslint ./src/**/*.ts",
 		"compile": "tsc",
-		"build": "npm run lint && npm run compile"
+		"build": "npm run lint && npm run compile",
+		"up": "git merge master"
 	},
 	"repository": {
 		"type": "git",
@@ -44,6 +46,7 @@
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@typescript-eslint/parser": "latest",
 		"ava": "latest",
+		"del-cli": "latest",
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-import": "latest",
