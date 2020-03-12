@@ -53,6 +53,7 @@
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-import": "latest",
 		"log4js": "latest",
+		"minio": "latest",
 		"typescript": "next"
 	}
 }
