@@ -12,7 +12,8 @@ async function resolve_path(file_name: string, path: string) {
 	return full_path;
 }
 
-export default async function invoke<T>(cwd: string, service: string, content: unknown, actionid: string) {
+export default async function invoke<T>(service: string, content: unknown, actionid: string) {
+	const cwd = config.cwd;
 	const tm = new Date().getTime();
 	logger.info(`Begin dealing message, service=${service}`);
 	const body = JSON.stringify(content);
