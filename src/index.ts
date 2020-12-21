@@ -1,9 +1,9 @@
 import { constants, promises as fs } from 'fs';
 import { join } from 'path';
-import { getLogger } from 'log4js';
+import anylogger from 'anylogger';
 import config from '@mmstudio/config';
 
-const logger = getLogger();
+const logger = anylogger('invoke');
 
 async function resolve_path(file_name: string, path: string) {
 	// !!! We could not use require.resolve here, because electron does not support.
